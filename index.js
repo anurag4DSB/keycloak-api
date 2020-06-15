@@ -1,15 +1,21 @@
-// Nous importons Express dans notre application
 import express from 'express';
+import bodyParser from 'body-parser';
 
-// Notre Application utilisera express grace à cette ligne
 const app = express();
+app.use(bodyParser.json());
 
-// Voici notre 1ere route
-app.get('/', function(req, res) {
-  res.send('Welcome to home page');
+app.get('/api/unsecured', function(req, res) {
+  res.json({ message: 'This is an unsecured endpoint payload' });
 });
 
-// Si tout se passe bien notre application écoutera sur le port 3000
+app.get('/api/user', function(req, res) {
+  res.json({ message: 'This is an USER endpoint payload' });
+});
+
+app.get('/api/admin', function(req, res) {
+  res.json({ message: 'This is an ADMIN endpoint payload' });
+});
+
 app.listen(3000, err => {
   if (err) {
     console.error(err);
