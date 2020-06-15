@@ -1,0 +1,32 @@
+{
+  "name": "keycloak-api",
+  "version": "1.0.0",
+  "description": "Node.js API with Keycloak",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node --presets es2015 index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anurag4DSB/keycloak-api.git"
+  },
+  "keywords": [
+    "keycloack",
+    "nodejs",
+    "api"
+  ],
+  "author": "Anurag Mittal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anurag4DSB/keycloak-api/issues"
+  },
+  "homepage": "https://github.com/anurag4DSB/keycloak-api#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "save-dev": "0.0.1-security"
+  }
+}
